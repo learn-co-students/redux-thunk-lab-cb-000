@@ -3,7 +3,7 @@ export default (state = {loading: false, pictures: []}, action) => {
 
     case 'LOADING_CATS':
     console.log("loading")
-      return {loading: true, cats: []};
+      return {loading: true, pictures: []};
 
     case 'FETCH_CATS':
     console.log("getting")

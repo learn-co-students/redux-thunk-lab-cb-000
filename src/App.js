@@ -9,7 +9,6 @@ class App extends Component {
 
   componentDidMount() {
     this.props.fetchCats()
-    <CatList catPics={this.props.catPics} />
   };
 
   render() {
@@ -22,15 +21,19 @@ class App extends Component {
             </Navbar.Brand>
           </Navbar.Header>
         </Navbar>
-
+        {this.props.catPics ? (
+          <CatList catPics={this.props.catPics} />) : null
+        }
       </div>
     );
   }
 }
 
 const mapStateToProps = (state) => {
+  console.log("current props")
+  console.log(state)
   return {
-    catPics: state.pictures
+    catPics: state.cats.pictures
   }
 }
 
