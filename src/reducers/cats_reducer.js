@@ -1,10 +1,9 @@
-export default (state = [], action) => {
+export default (state = {loading: false, pictures: []}, action) => {
   switch (action.type) {
     case 'FETCH_CATS':
-      return action.cats;
+      return {loading: false, pictures: action.payload};
     case 'LOADING_CATS':
-      //const pet = Object.assign({}, action.pet, { id: state.length + 1} );
-      //return [ ...state, pet ];
+      return {loading: true, pictures: action.payload};
     default:
       return state;
   }

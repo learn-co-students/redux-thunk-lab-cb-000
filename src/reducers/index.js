@@ -1,6 +1,9 @@
 import { combineReducers } from 'redux';
-import catsReducer from './petsReducer';
+import catsReducer from './cats_reducer';
 
-export default combineReducers({
+const rootReducer =  combineReducers({
   cats: catsReducer
 });
+
+
+export default rootReducer;
